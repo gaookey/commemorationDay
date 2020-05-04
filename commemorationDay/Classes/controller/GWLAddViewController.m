@@ -7,6 +7,7 @@
 //
 
 #import "GWLAddViewController.h"
+#import "NSCalendar+GWLExtend.h"
 
 @interface GWLAddViewController () <UITextFieldDelegate>
 
@@ -48,6 +49,13 @@
     model.title = self.eventName.text.length > 0 ? self.eventName.text : @"事件名称";
     model.time = self.eventTime.text.length > 0 ? self.eventTime.text : [[NSDate date] stringWithFormat:@"yyyy-MM-dd"];
     
+    NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+
+    NSInteger time = [cal daysWithinEraFromDate:[NSDate dateWithString:model.time format:@"yyyy-MM-dd"] toDate:[NSDate date]];
+    
+    model.cumulative = [NSString stringWithFormat:@"%ld", (long)time];
+    
+
     if (self.refreshDayList) {
         self.refreshDayList(model);
     }

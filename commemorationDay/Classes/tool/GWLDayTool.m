@@ -69,22 +69,19 @@
 }
 
 + (NSString *)getWeekDayWithDate:(NSDate *)date {
-    NSCalendar *greCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSInteger weekday = date.weekday;
     
-    NSDateComponents *dateComponents = [greCalendar components:NSCalendarUnitWeekday fromDate:date];
-    NSString *str = [NSString stringWithFormat:@"%li",(long)dateComponents.weekday];
-    
-    if ([str isEqual: @"1"]) {
+    if (weekday == 1) {
         return @"星期日";
-    } else if ([str isEqual:@"2"]) {
+    } else if (weekday == 2) {
         return @"星期一";
-    } else if ([str isEqual:@"3"]) {
+    } else if (weekday == 3) {
         return @"星期二";
-    } else if ([str isEqual:@"4"]) {
+    } else if (weekday == 4) {
         return @"星期三";
-    } else if ([str isEqual:@"5"]) {
+    } else if (weekday == 5) {
         return @"星期四";
-    } else if ([str isEqual:@"6"]) {
+    } else if (weekday == 6) {
         return @"星期五";
     } else {
         return @"星期六";

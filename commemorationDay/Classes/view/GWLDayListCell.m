@@ -27,7 +27,13 @@
     
     self.name.text = model.title;
     self.date.text = model.time;
-    self.cumulative.text = model.cumulative;
+    
+    self.cumulative.text = [NSString stringWithFormat:@"第 %@ 天", model.cumulative];
+    
+    NSMutableAttributedString *cumulativeAtt = [[NSMutableAttributedString alloc] initWithString:self.cumulative.text];
+    [cumulativeAtt addAttributes:@{NSForegroundColorAttributeName: UIColor.blackColor, NSFontAttributeName: [UIFont systemFontOfSize:50]} range:NSMakeRange(@"第 ".length, model.cumulative.length + 1)];
+    self.cumulative.attributedText = cumulativeAtt;
+    
     self.surplus.text = model.surplus;
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E8B94B74245F394500EC624D /* GWLAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B94B72245F394500EC624D /* GWLAddViewController.m */; };
 		E8B94B75245F394500EC624D /* GWLAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8B94B73245F394500EC624D /* GWLAddViewController.xib */; };
+		E8B94B78245FF51800EC624D /* NSCalendar+GWLExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B94B77245FF51800EC624D /* NSCalendar+GWLExtend.m */; };
 		E8CE00AF245F2281001E68BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE00AE245F2281001E68BA /* AppDelegate.m */; };
 		E8CE00B2245F2281001E68BA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE00B1245F2281001E68BA /* SceneDelegate.m */; };
 		E8CE00B5245F2281001E68BA /* GWLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE00B4245F2281001E68BA /* GWLHomeViewController.m */; };
@@ -49,7 +50,9 @@
 		E8B94B71245F394500EC624D /* GWLAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWLAddViewController.h; sourceTree = "<group>"; };
 		E8B94B72245F394500EC624D /* GWLAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWLAddViewController.m; sourceTree = "<group>"; };
 		E8B94B73245F394500EC624D /* GWLAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GWLAddViewController.xib; sourceTree = "<group>"; };
-		E8CE00AA245F2281001E68BA /* commemorationDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commemorationDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8B94B76245FF51800EC624D /* NSCalendar+GWLExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+GWLExtend.h"; sourceTree = "<group>"; };
+		E8B94B77245FF51800EC624D /* NSCalendar+GWLExtend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+GWLExtend.m"; sourceTree = "<group>"; };
+		E8CE00AA245F2281001E68BA /* 纪念日.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "纪念日.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CE00AD245F2281001E68BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8CE00AE245F2281001E68BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E8CE00B0245F2281001E68BA /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -136,7 +139,7 @@
 		E8CE00AB245F2281001E68BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E8CE00AA245F2281001E68BA /* commemorationDay.app */,
+				E8CE00AA245F2281001E68BA /* 纪念日.app */,
 				E8CE00C5245F2283001E68BA /* commemorationDayTests.xctest */,
 				E8CE00D0245F2283001E68BA /* commemorationDayUITests.xctest */,
 			);
@@ -225,6 +228,8 @@
 			children = (
 				E8CE00E2245F288A001E68BA /* GWLDayTool.h */,
 				E8CE00E3245F288A001E68BA /* GWLDayTool.m */,
+				E8B94B76245FF51800EC624D /* NSCalendar+GWLExtend.h */,
+				E8B94B77245FF51800EC624D /* NSCalendar+GWLExtend.m */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -247,7 +252,7 @@
 			);
 			name = commemorationDay;
 			productName = commemorationDay;
-			productReference = E8CE00AA245F2281001E68BA /* commemorationDay.app */;
+			productReference = E8CE00AA245F2281001E68BA /* 纪念日.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E8CE00C4245F2283001E68BA /* commemorationDayTests */ = {
@@ -389,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8CE00B5245F2281001E68BA /* GWLHomeViewController.m in Sources */,
+				E8B94B78245FF51800EC624D /* NSCalendar+GWLExtend.m in Sources */,
 				E8CE00EA245F2EC0001E68BA /* GWLDayDataModel.m in Sources */,
 				E8CE00E4245F288A001E68BA /* GWLDayTool.m in Sources */,
 				E8B94B74245F394500EC624D /* GWLAddViewController.m in Sources */,
@@ -574,7 +580,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftprimer.commemorationDay;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "纪念日";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -593,7 +599,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftprimer.commemorationDay;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "纪念日";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
