@@ -44,6 +44,10 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"多选" style:UIBarButtonItemStyleDone target:self action:@selector(moreSelect)];
 }
 - (void)moreSelect {
+    if (self.dayData.count <= 0 && !self.isDayListEditing) {
+        return;
+    }
+    
     self.isDayListEditing = !self.isDayListEditing;
     [self.dayList setEditing:self.isDayListEditing animated:YES];
     
@@ -73,6 +77,7 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
         NSData *data = dataArr[i];
         NSError *error = nil;
         GWLDayDataModel *model = [NSKeyedUnarchiver unarchivedObjectOfClass:[GWLDayDataModel class] fromData:data error:&error];
+        
         [self.dayData addObject:model];
     }
     [self.dayList reloadData];
@@ -90,6 +95,10 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
 }
 - (IBAction)addDay:(id)sender {
     if (self.isDayListEditing) {
+        if (self.delectData.count <= 0) {
+            return;
+        }
+        
         for (NSInteger i = 0; i < self.delectData.count; i ++) {
             GWLDayDataModel *model = self.delectData[i];
             [self.dayData removeObject:model];

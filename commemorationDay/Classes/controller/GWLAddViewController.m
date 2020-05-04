@@ -7,7 +7,6 @@
 //
 
 #import "GWLAddViewController.h"
-#import "NSCalendar+GWLExtend.h"
 
 @interface GWLAddViewController () <UITextFieldDelegate>
 
@@ -48,20 +47,7 @@
     GWLDayDataModel *model = [[GWLDayDataModel alloc] init];
     model.title = self.eventName.text.length > 0 ? self.eventName.text : @"事件名称";
     model.time = self.eventTime.text.length > 0 ? self.eventTime.text : [[NSDate date] stringWithFormat:@"yyyy-MM-dd"];
-    
-    NSInteger cha = [[[[[NSDate date] stringWithFormat:@"yyyy-MM-dd"] componentsSeparatedByString:@"-"] firstObject] integerValue] - [[[self.eventTime.text componentsSeparatedByString:@"-"] firstObject] integerValue];
-    if (cha == 0) {
-        cha = 1;
-    }
-    
-    NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSInteger cumulativeTime = [cal daysWithinEraFromDate:[NSDate dateWithString:model.time format:@"yyyy-MM-dd"] toDate:[NSDate date]];
-    model.cumulative = [NSString stringWithFormat:@"%ld", (long)cumulativeTime];
-    
-    NSDate *addingYears = [[NSDate dateWithString:model.time format:@"yyyy-MM-dd"] dateByAddingYears:cha];
-    NSInteger surplusTime = [cal daysWithinEraFromDate:[NSDate date] toDate:addingYears];
-    model.surplus = [NSString stringWithFormat:@"%ld", (long)surplusTime];
-    
+        
     if (self.refreshDayList) {
         self.refreshDayList(model);
     }

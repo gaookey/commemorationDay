@@ -32,13 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1a5-Ve-NfA">
-                                <rect key="frame" x="0.0" y="101.5" width="273" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKG-X6-0WQ">
-                                <rect key="frame" x="273" y="101.5" width="273" height="20.5"/>
+                                <rect key="frame" x="50" y="101.5" width="21.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -53,9 +47,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="1a5-Ve-NfA" firstAttribute="leading" secondItem="qxC-Jv-pJ6" secondAttribute="leading" id="6zd-zu-dF9"/>
-                            <constraint firstItem="nKG-X6-0WQ" firstAttribute="leading" secondItem="1a5-Ve-NfA" secondAttribute="trailing" id="7Zw-zR-Ufs"/>
-                            <constraint firstItem="nKG-X6-0WQ" firstAttribute="centerY" secondItem="1a5-Ve-NfA" secondAttribute="centerY" id="9B0-Kp-Kj5"/>
+                            <constraint firstItem="1a5-Ve-NfA" firstAttribute="leading" secondItem="qxC-Jv-pJ6" secondAttribute="leading" constant="50" id="6zd-zu-dF9"/>
                             <constraint firstAttribute="trailing" secondItem="U6I-K3-hNj" secondAttribute="trailing" constant="20" id="Cqx-O4-qNj"/>
                             <constraint firstItem="U6I-K3-hNj" firstAttribute="leading" secondItem="qxC-Jv-pJ6" secondAttribute="leading" constant="20" id="LpC-aq-87z"/>
                             <constraint firstItem="1a5-Ve-NfA" firstAttribute="top" secondItem="bU4-cm-G3h" secondAttribute="bottom" constant="20" id="O0N-jg-ew6"/>
@@ -63,9 +55,6 @@
                             <constraint firstAttribute="trailing" secondItem="bU4-cm-G3h" secondAttribute="trailing" constant="20" id="Tby-cR-eTh"/>
                             <constraint firstAttribute="bottom" secondItem="1a5-Ve-NfA" secondAttribute="bottom" constant="20" id="UCb-NG-Pdt"/>
                             <constraint firstItem="7SQ-o1-FdR" firstAttribute="top" secondItem="U6I-K3-hNj" secondAttribute="bottom" constant="10" id="XS1-bC-AfV"/>
-                            <constraint firstItem="nKG-X6-0WQ" firstAttribute="width" secondItem="1a5-Ve-NfA" secondAttribute="width" id="Y8C-ol-g8z"/>
-                            <constraint firstItem="nKG-X6-0WQ" firstAttribute="height" secondItem="1a5-Ve-NfA" secondAttribute="height" id="bJv-Ok-o5p"/>
-                            <constraint firstAttribute="trailing" secondItem="nKG-X6-0WQ" secondAttribute="trailing" id="l8q-K8-TqR"/>
                             <constraint firstItem="7SQ-o1-FdR" firstAttribute="leading" secondItem="qxC-Jv-pJ6" secondAttribute="leading" constant="20" id="nkK-vV-QGx"/>
                             <constraint firstItem="U6I-K3-hNj" firstAttribute="top" secondItem="qxC-Jv-pJ6" secondAttribute="top" constant="20" id="nqa-ZP-IAq"/>
                             <constraint firstAttribute="trailing" secondItem="7SQ-o1-FdR" secondAttribute="trailing" constant="20" id="vBm-kr-OOz"/>
@@ -86,7 +75,6 @@
                 <outlet property="cumulative" destination="1a5-Ve-NfA" id="PXN-XH-HMs"/>
                 <outlet property="date" destination="bU4-cm-G3h" id="DOJ-Gf-kj5"/>
                 <outlet property="name" destination="U6I-K3-hNj" id="aq7-Vt-KuY"/>
-                <outlet property="surplus" destination="nKG-X6-0WQ" id="8ZJ-oa-H1Y"/>
             </connections>
             <point key="canvasLocation" x="-1117.3913043478262" y="-30.803571428571427"/>
         </tableViewCell>

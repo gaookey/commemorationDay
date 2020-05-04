@@ -14,8 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) NSString *time;
-@property (copy, nonatomic) NSString *cumulative;
-@property (copy, nonatomic) NSString *surplus;
 
 @end
 

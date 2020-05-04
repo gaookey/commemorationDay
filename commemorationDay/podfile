@@ -9,7 +9,6 @@ target 'commemorationDay' do
 
 pod 'Masonry'
 pod 'YYCategories'
-pod 'MBProgressHUD'
 
 end
 
