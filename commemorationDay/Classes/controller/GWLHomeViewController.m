@@ -21,37 +21,63 @@
 
 @end
 
-static NSString *const GWLDayListCellID = @"GWLDayListCellID";
+static NSString *const DAY_LIST_KEY = @"DAY_LIST_KEY";
+static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
 
 @implementation GWLHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self  loadDayData];
+    [self  loadCurrentDayData];
     
-    [self.dayList registerNib:[UINib nibWithNibName:NSStringFromClass([GWLDayListCell class]) bundle:nil] forCellReuseIdentifier:GWLDayListCellID];
+    [self setupDayList];
+    
+    [self loadLocalDayData];
+}
+- (void)addNewDayData:(GWLDayDataModel *)model {
+    [self.dayData addObject:model];
+    
+    NSMutableArray *dayDataArr = [NSMutableArray array];
+    for (NSInteger i = 0; i < self.dayData.count; i ++) {
+        GWLDayDataModel *model = self.dayData[i];
+        NSError *error = nil;
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:model requiringSecureCoding:YES error:&error];
+        
+        [dayDataArr addObject:data];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setObject:dayDataArr forKey:DAY_LIST_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [self.dayList reloadData];
+}
+- (void)loadLocalDayData {
+    NSMutableArray *dataArr = [[NSUserDefaults standardUserDefaults] objectForKey:DAY_LIST_KEY];
+    for (NSInteger i = 0; i < dataArr.count; i ++) {
+        NSData *data = dataArr[i];
+        NSError *error = nil;
+        GWLDayDataModel *model = [NSKeyedUnarchiver unarchivedObjectOfClass:[GWLDayDataModel class] fromData:data error:&error];
+        [self.dayData addObject:model];
+    }
+    [self.dayList reloadData];
+}
+- (void)setupDayList {
+    [self.dayList registerNib:[UINib nibWithNibName:NSStringFromClass([GWLDayListCell class]) bundle:nil] forCellReuseIdentifier:DAY_LIST_CELL_ID];
     [self.listView addSubview:self.dayList];
     [self.dayList mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.listView);
     }];
 }
-- (void)loadDayData {
-    
+- (void)loadCurrentDayData {
     self.today.text = [[NSDate date] stringWithFormat:@"yyyy-MM-dd"];
     self.lunarCalendar.text = [NSString stringWithFormat:@"%@ %@ %@", [GWLDayTool getChineseYearWithDate:[NSDate date]], [GWLDayTool getChineseCalendarWithDate:[NSDate date]], [GWLDayTool getWeekDayWithDate:[NSDate date]]];
 }
-
 - (IBAction)addDay:(id)sender {
     __weak typeof(self) weakSelf = self;
     GWLAddViewController *vc = [[GWLAddViewController alloc] init];
-    vc.backData = ^(NSString * _Nonnull title, NSString * _Nonnull time) {
-        GWLDayDataModel *model = [[GWLDayDataModel alloc] init];
-        model.title = title;
-        model.time = time;
-        
-        [weakSelf.dayData addObject:model];
-        [weakSelf.dayList reloadData];
+    vc.refreshDayList = ^(GWLDayDataModel * _Nonnull model) {
+        [weakSelf addNewDayData:model];
     };
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -60,8 +86,7 @@ static NSString *const GWLDayListCellID = @"GWLDayListCellID";
     return self.dayData.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    GWLDayListCell *cell = [tableView dequeueReusableCellWithIdentifier:GWLDayListCellID];
+    GWLDayListCell *cell = [tableView dequeueReusableCellWithIdentifier:DAY_LIST_CELL_ID];
     cell.model = self.dayData[indexPath.row];
     return cell;
 }

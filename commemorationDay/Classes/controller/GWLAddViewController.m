@@ -23,6 +23,9 @@
     
     self.title = @"添加新日子";
     
+    [self setupSetting];
+}
+- (void)setupSetting {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(saveData)];
     
     self.eventTime.placeholder = [[NSDate date] stringWithFormat:@"yyyy-MM-dd"];
@@ -31,7 +34,6 @@
     [self.datePicker addTarget:self action:@selector(dateChange:) forControlEvents:UIControlEventValueChanged];
 }
 - (void)dateChange:(UIDatePicker *)datePicker {
-    
     self.eventTime.text = [datePicker.date stringWithFormat:@"yyyy-MM-dd"];
 }
 
@@ -42,8 +44,12 @@
     return YES;
 }
 - (void)saveData {
-    if (self.backData) {
-        self.backData(self.eventName.text, self.eventTime.text);
+    GWLDayDataModel *model = [[GWLDayDataModel alloc] init];
+    model.title = self.eventName.text;
+    model.time = self.eventTime.text;
+    
+    if (self.refreshDayList) {
+        self.refreshDayList(model);
     }
     [self.navigationController popViewControllerAnimated:YES];
 }
