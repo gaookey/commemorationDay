@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GWLAddViewController">
+            <connections>
+                <outlet property="datePicker" destination="7c4-67-nFf" id="A7o-d1-evv"/>
+                <outlet property="eventName" destination="Gem-Jj-jkD" id="dPb-EN-gZJ"/>
+                <outlet property="eventTime" destination="gpx-Mx-slC" id="gU2-fA-kz9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="事件名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gem-Jj-jkD">
+                    <rect key="frame" x="20" y="74" width="374" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="jwX-bM-g0z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="uNZ-g7-J90"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gpx-Mx-slC">
+                    <rect key="frame" x="20" y="148" width="374" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="4hn-5K-pt1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="OT8-BB-LpS"/>
+                    </connections>
+                </textField>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="7c4-67-nFf">
+                    <rect key="frame" x="0.0" y="862" width="414" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="cJH-cZ-YUV"/>
+                    </constraints>
+                    <locale key="locale" localeIdentifier="yue_CN"/>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Gem-Jj-jkD" secondAttribute="trailing" constant="20" id="4Zk-iP-EGm"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gpx-Mx-slC" secondAttribute="trailing" constant="20" id="4kL-5z-Qjs"/>
+                <constraint firstItem="Gem-Jj-jkD" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="6kO-hu-UOt"/>
+                <constraint firstItem="gpx-Mx-slC" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="7CF-K6-MZH"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="7c4-67-nFf" secondAttribute="bottom" constant="-200" id="Bjq-Yg-Ufl"/>
+                <constraint firstItem="Gem-Jj-jkD" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="NIL-vI-biG"/>
+                <constraint firstItem="gpx-Mx-slC" firstAttribute="top" secondItem="Gem-Jj-jkD" secondAttribute="bottom" constant="30" id="NpX-Ed-ipm"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="7c4-67-nFf" secondAttribute="trailing" id="awO-X6-fr2"/>
+                <constraint firstItem="7c4-67-nFf" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="gqH-3n-P7w"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+</document>

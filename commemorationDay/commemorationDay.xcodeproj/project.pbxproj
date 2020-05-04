@@ -1,0 +1,719 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E8B94B74245F394500EC624D /* GWLAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B94B72245F394500EC624D /* GWLAddViewController.m */; };
+		E8B94B75245F394500EC624D /* GWLAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8B94B73245F394500EC624D /* GWLAddViewController.xib */; };
+		E8CE00AF245F2281001E68BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE00AE245F2281001E68BA /* AppDelegate.m */; };
+		E8CE00B2245F2281001E68BA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE00B1245F2281001E68BA /* SceneDelegate.m */; };
+		E8CE00B5245F2281001E68BA /* GWLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE00B4245F2281001E68BA /* GWLHomeViewController.m */; };
+		E8CE00B8245F2281001E68BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8CE00B6245F2281001E68BA /* Main.storyboard */; };
+		E8CE00BA245F2283001E68BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CE00B9245F2283001E68BA /* Assets.xcassets */; };
+		E8CE00BD245F2283001E68BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8CE00BB245F2283001E68BA /* LaunchScreen.storyboard */; };
+		E8CE00C0245F2283001E68BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE00BF245F2283001E68BA /* main.m */; };
+		E8CE00CA245F2283001E68BA /* commemorationDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE00C9245F2283001E68BA /* commemorationDayTests.m */; };
+		E8CE00D5245F2283001E68BA /* commemorationDayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE00D4245F2283001E68BA /* commemorationDayUITests.m */; };
+		E8CE00E4245F288A001E68BA /* GWLDayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE00E3245F288A001E68BA /* GWLDayTool.m */; };
+		E8CE00EA245F2EC0001E68BA /* GWLDayDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE00E9245F2EC0001E68BA /* GWLDayDataModel.m */; };
+		E8CE00EE245F2EE1001E68BA /* GWLDayListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE00EC245F2EE1001E68BA /* GWLDayListCell.m */; };
+		E8CE00EF245F2EE1001E68BA /* GWLDayListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8CE00ED245F2EE1001E68BA /* GWLDayListCell.xib */; };
+		F70F199B45539F0CFDDE2DF0 /* libPods-commemorationDay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B09C077059BA6823805AE945 /* libPods-commemorationDay.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E8CE00C6245F2283001E68BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8CE00A2245F2281001E68BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8CE00A9245F2281001E68BA;
+			remoteInfo = commemorationDay;
+		};
+		E8CE00D1245F2283001E68BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8CE00A2245F2281001E68BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8CE00A9245F2281001E68BA;
+			remoteInfo = commemorationDay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2757A1D373BCA07D3AC49064 /* Pods-commemorationDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commemorationDay.release.xcconfig"; path = "Target Support Files/Pods-commemorationDay/Pods-commemorationDay.release.xcconfig"; sourceTree = "<group>"; };
+		3A5FDC574908ADA6C95A682D /* Pods-commemorationDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commemorationDay.debug.xcconfig"; path = "Target Support Files/Pods-commemorationDay/Pods-commemorationDay.debug.xcconfig"; sourceTree = "<group>"; };
+		B09C077059BA6823805AE945 /* libPods-commemorationDay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-commemorationDay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8B94B71245F394500EC624D /* GWLAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWLAddViewController.h; sourceTree = "<group>"; };
+		E8B94B72245F394500EC624D /* GWLAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWLAddViewController.m; sourceTree = "<group>"; };
+		E8B94B73245F394500EC624D /* GWLAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GWLAddViewController.xib; sourceTree = "<group>"; };
+		E8CE00AA245F2281001E68BA /* commemorationDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = commemorationDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8CE00AD245F2281001E68BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E8CE00AE245F2281001E68BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E8CE00B0245F2281001E68BA /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		E8CE00B1245F2281001E68BA /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		E8CE00B3245F2281001E68BA /* GWLHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWLHomeViewController.h; sourceTree = "<group>"; };
+		E8CE00B4245F2281001E68BA /* GWLHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWLHomeViewController.m; sourceTree = "<group>"; };
+		E8CE00B7245F2281001E68BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E8CE00B9245F2283001E68BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E8CE00BC245F2283001E68BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E8CE00BE245F2283001E68BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8CE00BF245F2283001E68BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E8CE00C5245F2283001E68BA /* commemorationDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = commemorationDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8CE00C9245F2283001E68BA /* commemorationDayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = commemorationDayTests.m; sourceTree = "<group>"; };
+		E8CE00CB245F2283001E68BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8CE00D0245F2283001E68BA /* commemorationDayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = commemorationDayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8CE00D4245F2283001E68BA /* commemorationDayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = commemorationDayUITests.m; sourceTree = "<group>"; };
+		E8CE00D6245F2283001E68BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8CE00E2245F288A001E68BA /* GWLDayTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWLDayTool.h; sourceTree = "<group>"; };
+		E8CE00E3245F288A001E68BA /* GWLDayTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWLDayTool.m; sourceTree = "<group>"; };
+		E8CE00E8245F2EC0001E68BA /* GWLDayDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWLDayDataModel.h; sourceTree = "<group>"; };
+		E8CE00E9245F2EC0001E68BA /* GWLDayDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWLDayDataModel.m; sourceTree = "<group>"; };
+		E8CE00EB245F2EE1001E68BA /* GWLDayListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWLDayListCell.h; sourceTree = "<group>"; };
+		E8CE00EC245F2EE1001E68BA /* GWLDayListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWLDayListCell.m; sourceTree = "<group>"; };
+		E8CE00ED245F2EE1001E68BA /* GWLDayListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GWLDayListCell.xib; sourceTree = "<group>"; };
+		E8CE00F0245F3656001E68BA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E8CE00A7245F2281001E68BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70F199B45539F0CFDDE2DF0 /* libPods-commemorationDay.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8CE00C2245F2283001E68BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8CE00CD245F2283001E68BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		300B38B517F3AFF1430B867D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A5FDC574908ADA6C95A682D /* Pods-commemorationDay.debug.xcconfig */,
+				2757A1D373BCA07D3AC49064 /* Pods-commemorationDay.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D70913D8618F858DE891AE6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B09C077059BA6823805AE945 /* libPods-commemorationDay.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8CE00A1245F2281001E68BA = {
+			isa = PBXGroup;
+			children = (
+				E8CE00F1245F3786001E68BA /* Classes */,
+				E8CE00AC245F2281001E68BA /* commemorationDay */,
+				E8CE00C8245F2283001E68BA /* commemorationDayTests */,
+				E8CE00D3245F2283001E68BA /* commemorationDayUITests */,
+				E8CE00AB245F2281001E68BA /* Products */,
+				300B38B517F3AFF1430B867D /* Pods */,
+				D70913D8618F858DE891AE6D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E8CE00AB245F2281001E68BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8CE00AA245F2281001E68BA /* commemorationDay.app */,
+				E8CE00C5245F2283001E68BA /* commemorationDayTests.xctest */,
+				E8CE00D0245F2283001E68BA /* commemorationDayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8CE00AC245F2281001E68BA /* commemorationDay */ = {
+			isa = PBXGroup;
+			children = (
+				E8CE00AD245F2281001E68BA /* AppDelegate.h */,
+				E8CE00AE245F2281001E68BA /* AppDelegate.m */,
+				E8CE00B0245F2281001E68BA /* SceneDelegate.h */,
+				E8CE00B1245F2281001E68BA /* SceneDelegate.m */,
+				E8CE00B6245F2281001E68BA /* Main.storyboard */,
+				E8CE00B9245F2283001E68BA /* Assets.xcassets */,
+				E8CE00BB245F2283001E68BA /* LaunchScreen.storyboard */,
+				E8CE00BE245F2283001E68BA /* Info.plist */,
+				E8CE00BF245F2283001E68BA /* main.m */,
+				E8CE00F0245F3656001E68BA /* PrefixHeader.pch */,
+			);
+			path = commemorationDay;
+			sourceTree = "<group>";
+		};
+		E8CE00C8245F2283001E68BA /* commemorationDayTests */ = {
+			isa = PBXGroup;
+			children = (
+				E8CE00C9245F2283001E68BA /* commemorationDayTests.m */,
+				E8CE00CB245F2283001E68BA /* Info.plist */,
+			);
+			path = commemorationDayTests;
+			sourceTree = "<group>";
+		};
+		E8CE00D3245F2283001E68BA /* commemorationDayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E8CE00D4245F2283001E68BA /* commemorationDayUITests.m */,
+				E8CE00D6245F2283001E68BA /* Info.plist */,
+			);
+			path = commemorationDayUITests;
+			sourceTree = "<group>";
+		};
+		E8CE00F1245F3786001E68BA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E8CE00F5245F37B5001E68BA /* tool */,
+				E8CE00F2245F3786001E68BA /* controller */,
+				E8CE00F3245F3786001E68BA /* model */,
+				E8CE00F4245F3786001E68BA /* view */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E8CE00F2245F3786001E68BA /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8CE00B3245F2281001E68BA /* GWLHomeViewController.h */,
+				E8CE00B4245F2281001E68BA /* GWLHomeViewController.m */,
+				E8B94B71245F394500EC624D /* GWLAddViewController.h */,
+				E8B94B72245F394500EC624D /* GWLAddViewController.m */,
+				E8B94B73245F394500EC624D /* GWLAddViewController.xib */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		E8CE00F3245F3786001E68BA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E8CE00E8245F2EC0001E68BA /* GWLDayDataModel.h */,
+				E8CE00E9245F2EC0001E68BA /* GWLDayDataModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E8CE00F4245F3786001E68BA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E8CE00EB245F2EE1001E68BA /* GWLDayListCell.h */,
+				E8CE00EC245F2EE1001E68BA /* GWLDayListCell.m */,
+				E8CE00ED245F2EE1001E68BA /* GWLDayListCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		E8CE00F5245F37B5001E68BA /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				E8CE00E2245F288A001E68BA /* GWLDayTool.h */,
+				E8CE00E3245F288A001E68BA /* GWLDayTool.m */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E8CE00A9245F2281001E68BA /* commemorationDay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8CE00D9245F2283001E68BA /* Build configuration list for PBXNativeTarget "commemorationDay" */;
+			buildPhases = (
+				0E5E22A34C823543AA1A2922 /* [CP] Check Pods Manifest.lock */,
+				E8CE00A6245F2281001E68BA /* Sources */,
+				E8CE00A7245F2281001E68BA /* Frameworks */,
+				E8CE00A8245F2281001E68BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = commemorationDay;
+			productName = commemorationDay;
+			productReference = E8CE00AA245F2281001E68BA /* commemorationDay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E8CE00C4245F2283001E68BA /* commemorationDayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8CE00DC245F2283001E68BA /* Build configuration list for PBXNativeTarget "commemorationDayTests" */;
+			buildPhases = (
+				E8CE00C1245F2283001E68BA /* Sources */,
+				E8CE00C2245F2283001E68BA /* Frameworks */,
+				E8CE00C3245F2283001E68BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8CE00C7245F2283001E68BA /* PBXTargetDependency */,
+			);
+			name = commemorationDayTests;
+			productName = commemorationDayTests;
+			productReference = E8CE00C5245F2283001E68BA /* commemorationDayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E8CE00CF245F2283001E68BA /* commemorationDayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8CE00DF245F2283001E68BA /* Build configuration list for PBXNativeTarget "commemorationDayUITests" */;
+			buildPhases = (
+				E8CE00CC245F2283001E68BA /* Sources */,
+				E8CE00CD245F2283001E68BA /* Frameworks */,
+				E8CE00CE245F2283001E68BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E8CE00D2245F2283001E68BA /* PBXTargetDependency */,
+			);
+			name = commemorationDayUITests;
+			productName = commemorationDayUITests;
+			productReference = E8CE00D0245F2283001E68BA /* commemorationDayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8CE00A2245F2281001E68BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GWL;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = gwl;
+				TargetAttributes = {
+					E8CE00A9245F2281001E68BA = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					E8CE00C4245F2283001E68BA = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = E8CE00A9245F2281001E68BA;
+					};
+					E8CE00CF245F2283001E68BA = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = E8CE00A9245F2281001E68BA;
+					};
+				};
+			};
+			buildConfigurationList = E8CE00A5245F2281001E68BA /* Build configuration list for PBXProject "commemorationDay" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E8CE00A1245F2281001E68BA;
+			productRefGroup = E8CE00AB245F2281001E68BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E8CE00A9245F2281001E68BA /* commemorationDay */,
+				E8CE00C4245F2283001E68BA /* commemorationDayTests */,
+				E8CE00CF245F2283001E68BA /* commemorationDayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E8CE00A8245F2281001E68BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8B94B75245F394500EC624D /* GWLAddViewController.xib in Resources */,
+				E8CE00BD245F2283001E68BA /* LaunchScreen.storyboard in Resources */,
+				E8CE00BA245F2283001E68BA /* Assets.xcassets in Resources */,
+				E8CE00B8245F2281001E68BA /* Main.storyboard in Resources */,
+				E8CE00EF245F2EE1001E68BA /* GWLDayListCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8CE00C3245F2283001E68BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8CE00CE245F2283001E68BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E5E22A34C823543AA1A2922 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-commemorationDay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E8CE00A6245F2281001E68BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8CE00B5245F2281001E68BA /* GWLHomeViewController.m in Sources */,
+				E8CE00EA245F2EC0001E68BA /* GWLDayDataModel.m in Sources */,
+				E8CE00E4245F288A001E68BA /* GWLDayTool.m in Sources */,
+				E8B94B74245F394500EC624D /* GWLAddViewController.m in Sources */,
+				E8CE00AF245F2281001E68BA /* AppDelegate.m in Sources */,
+				E8CE00C0245F2283001E68BA /* main.m in Sources */,
+				E8CE00B2245F2281001E68BA /* SceneDelegate.m in Sources */,
+				E8CE00EE245F2EE1001E68BA /* GWLDayListCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8CE00C1245F2283001E68BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8CE00CA245F2283001E68BA /* commemorationDayTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8CE00CC245F2283001E68BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8CE00D5245F2283001E68BA /* commemorationDayUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E8CE00C7245F2283001E68BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8CE00A9245F2281001E68BA /* commemorationDay */;
+			targetProxy = E8CE00C6245F2283001E68BA /* PBXContainerItemProxy */;
+		};
+		E8CE00D2245F2283001E68BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8CE00A9245F2281001E68BA /* commemorationDay */;
+			targetProxy = E8CE00D1245F2283001E68BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E8CE00B6245F2281001E68BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8CE00B7245F2281001E68BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E8CE00BB245F2283001E68BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8CE00BC245F2283001E68BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E8CE00D7245F2283001E68BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E8CE00D8245F2283001E68BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E8CE00DA245F2283001E68BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5FDC574908ADA6C95A682D /* Pods-commemorationDay.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBZXT2966T;
+				GCC_PREFIX_HEADER = commemorationDay/PrefixHeader.pch;
+				INFOPLIST_FILE = commemorationDay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftprimer.commemorationDay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E8CE00DB245F2283001E68BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2757A1D373BCA07D3AC49064 /* Pods-commemorationDay.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBZXT2966T;
+				GCC_PREFIX_HEADER = commemorationDay/PrefixHeader.pch;
+				INFOPLIST_FILE = commemorationDay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftprimer.commemorationDay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E8CE00DD245F2283001E68BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBZXT2966T;
+				INFOPLIST_FILE = commemorationDayTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftprimer.commemorationDayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/commemorationDay.app/commemorationDay";
+			};
+			name = Debug;
+		};
+		E8CE00DE245F2283001E68BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBZXT2966T;
+				INFOPLIST_FILE = commemorationDayTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftprimer.commemorationDayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/commemorationDay.app/commemorationDay";
+			};
+			name = Release;
+		};
+		E8CE00E0245F2283001E68BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBZXT2966T;
+				INFOPLIST_FILE = commemorationDayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftprimer.commemorationDayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = commemorationDay;
+			};
+			name = Debug;
+		};
+		E8CE00E1245F2283001E68BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BBZXT2966T;
+				INFOPLIST_FILE = commemorationDayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftprimer.commemorationDayUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = commemorationDay;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E8CE00A5245F2281001E68BA /* Build configuration list for PBXProject "commemorationDay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8CE00D7245F2283001E68BA /* Debug */,
+				E8CE00D8245F2283001E68BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8CE00D9245F2283001E68BA /* Build configuration list for PBXNativeTarget "commemorationDay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8CE00DA245F2283001E68BA /* Debug */,
+				E8CE00DB245F2283001E68BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8CE00DC245F2283001E68BA /* Build configuration list for PBXNativeTarget "commemorationDayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8CE00DD245F2283001E68BA /* Debug */,
+				E8CE00DE245F2283001E68BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8CE00DF245F2283001E68BA /* Build configuration list for PBXNativeTarget "commemorationDayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8CE00E0245F2283001E68BA /* Debug */,
+				E8CE00E1245F2283001E68BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E8CE00A2245F2281001E68BA /* Project object */;
+}
