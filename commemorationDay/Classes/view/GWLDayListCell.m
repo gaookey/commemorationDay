@@ -34,7 +34,11 @@
     [cumulativeAtt addAttributes:@{NSForegroundColorAttributeName: UIColor.blackColor, NSFontAttributeName: [UIFont systemFontOfSize:50]} range:NSMakeRange(@"第 ".length, model.cumulative.length + 1)];
     self.cumulative.attributedText = cumulativeAtt;
     
-    self.surplus.text = model.surplus;
+    self.surplus.text = [NSString stringWithFormat:@"剩 %@ 天", model.surplus];
+    
+    NSMutableAttributedString *surplusAtt = [[NSMutableAttributedString alloc] initWithString:self.surplus.text];
+    [surplusAtt addAttributes:@{NSForegroundColorAttributeName: UIColor.blackColor, NSFontAttributeName: [UIFont systemFontOfSize:50]} range:NSMakeRange(@"剩 ".length, model.surplus.length + 1)];
+    self.surplus.attributedText = surplusAtt;
 }
 
 @end
