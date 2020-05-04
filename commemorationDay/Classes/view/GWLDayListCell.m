@@ -29,11 +29,14 @@
         
     NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSInteger cumulativeTime = [cal daysWithinEraFromDate:[NSDate dateWithString:model.time format:@"yyyy-MM-dd"] toDate:[NSDate date]];
-    
-    self.cumulative.text = [NSString stringWithFormat:@"第 %ld 天", (long)cumulativeTime];
+    if (cumulativeTime < 0) {
+        self.cumulative.text = [NSString stringWithFormat:@"剩 %ld 天", ABS(cumulativeTime)];
+    } else {
+        self.cumulative.text = [NSString stringWithFormat:@"第 %ld 天", ABS(cumulativeTime)];
+    }
     
     NSMutableAttributedString *cumulativeAtt = [[NSMutableAttributedString alloc] initWithString:self.cumulative.text];
-    [cumulativeAtt addAttributes:@{NSForegroundColorAttributeName: UIColor.blackColor, NSFontAttributeName: [UIFont systemFontOfSize:50]} range:NSMakeRange(@"第 ".length, [NSString stringWithFormat:@"%ld", (long)cumulativeTime].length + 1)];
+    [cumulativeAtt addAttributes:@{NSForegroundColorAttributeName: UIColor.blackColor, NSFontAttributeName: [UIFont systemFontOfSize:50]} range:NSMakeRange(@"第 ".length, [NSString stringWithFormat:@"%ld", ABS(cumulativeTime)].length + 1)];
     self.cumulative.attributedText = cumulativeAtt;
 }
 
