@@ -45,8 +45,8 @@
 }
 - (void)saveData {
     GWLDayDataModel *model = [[GWLDayDataModel alloc] init];
-    model.title = self.eventName.text;
-    model.time = self.eventTime.text;
+    model.title = self.eventName.text.length > 0 ? self.eventName.text : @"事件名称";
+    model.time = self.eventTime.text.length > 0 ? self.eventTime.text : [[NSDate date] stringWithFormat:@"yyyy-MM-dd"];
     
     if (self.refreshDayList) {
         self.refreshDayList(model);

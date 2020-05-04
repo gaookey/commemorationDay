@@ -18,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UIView *listView;
 @property (strong, nonatomic) UITableView *dayList;
 @property (strong, nonatomic) NSMutableArray <GWLDayDataModel*>*dayData;
+@property (assign, nonatomic) BOOL isDayListEditing;
+///多选删除的数据
+@property (strong, nonatomic) NSMutableArray<GWLDayDataModel*> *delectData;
 
 @end
 
@@ -34,10 +37,23 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
     [self setupDayList];
     
     [self loadLocalDayData];
-}
-- (void)addNewDayData:(GWLDayDataModel *)model {
-    [self.dayData addObject:model];
     
+    [self addLeftBarButtonItem];
+}
+- (void)addLeftBarButtonItem {
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"多选" style:UIBarButtonItemStyleDone target:self action:@selector(moreSelect)];
+}
+- (void)moreSelect {
+    self.isDayListEditing = !self.isDayListEditing;
+    [self.dayList setEditing:self.isDayListEditing animated:YES];
+    
+    self.navigationItem.leftBarButtonItem.title = self.isDayListEditing ? @"取消" : @"多选";
+    self.navigationItem.rightBarButtonItem.title = self.isDayListEditing ? @"删除" : @"添加";
+    
+    self.dayList.allowsSelection = self.isDayListEditing;
+}
+#pragma mark - 更新数据
+- (void)updateDayData {
     NSMutableArray *dayDataArr = [NSMutableArray array];
     for (NSInteger i = 0; i < self.dayData.count; i ++) {
         GWLDayDataModel *model = self.dayData[i];
@@ -49,9 +65,8 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
     
     [[NSUserDefaults standardUserDefaults] setObject:dayDataArr forKey:DAY_LIST_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [self.dayList reloadData];
 }
+#pragma mark - 获取本地数据
 - (void)loadLocalDayData {
     NSMutableArray *dataArr = [[NSUserDefaults standardUserDefaults] objectForKey:DAY_LIST_KEY];
     for (NSInteger i = 0; i < dataArr.count; i ++) {
@@ -74,10 +89,25 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
     self.lunarCalendar.text = [NSString stringWithFormat:@"%@ %@ %@", [GWLDayTool getChineseYearWithDate:[NSDate date]], [GWLDayTool getChineseCalendarWithDate:[NSDate date]], [GWLDayTool getWeekDayWithDate:[NSDate date]]];
 }
 - (IBAction)addDay:(id)sender {
+    if (self.isDayListEditing) {
+        for (NSInteger i = 0; i < self.delectData.count; i ++) {
+            GWLDayDataModel *model = self.delectData[i];
+            [self.dayData removeObject:model];
+        }
+        [self.dayList reloadData];
+        [self moreSelect];
+        [self updateDayData];
+    } else {
+        [self pushAddViewController];
+    }
+}
+- (void)pushAddViewController {
     __weak typeof(self) weakSelf = self;
     GWLAddViewController *vc = [[GWLAddViewController alloc] init];
     vc.refreshDayList = ^(GWLDayDataModel * _Nonnull model) {
-        [weakSelf addNewDayData:model];
+        [weakSelf.dayData addObject:model];
+        [weakSelf.dayList reloadData];
+        [weakSelf updateDayData];
     };
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -90,7 +120,30 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
     cell.model = self.dayData[indexPath.row];
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {   GWLDayDataModel *model = self.dayData[indexPath.row];
+    [self.delectData addObject:model];
+}
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GWLDayDataModel *model = self.dayData[indexPath.row];
+    [self.delectData removeObject:model];
+}
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (self.dayList.editing) {
+        return UITableViewCellEditingStyleDelete| UITableViewCellEditingStyleInsert;
+    } else {
+        return UITableViewCellEditingStyleDelete;
+    }
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.dayData removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self updateDayData];
+    }
+}
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"删除";
+}
 #pragma mark - dayList
 - (UITableView *)dayList {
     if (_dayList == nil) {
@@ -113,6 +166,11 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
     }
     return _dayData;
 }
-
+- (NSMutableArray<GWLDayDataModel *> *)delectData {
+    if (!_delectData) {
+        _delectData = [[NSMutableArray alloc] init];
+    }
+    return _delectData;
+}
 
 @end
