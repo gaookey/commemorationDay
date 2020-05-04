@@ -153,6 +153,14 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
     return @"删除";
 }
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    [self.dayData exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
+    [tableView moveRowAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
+    [self updateDayData];
+}
 #pragma mark - dayList
 - (UITableView *)dayList {
     if (_dayList == nil) {
