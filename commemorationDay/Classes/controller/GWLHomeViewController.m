@@ -163,9 +163,7 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
 }
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.dayData removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        [self updateDayData];
+        [self addDelectTips:indexPath];
     }
 }
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -178,6 +176,16 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
     [self.dayData exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
     [tableView moveRowAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
     [self updateDayData];
+}
+- (void)addDelectTips:(NSIndexPath *)indexPath {//防止自己手误删除
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"给个机会吧" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"不给" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [self.dayData removeObjectAtIndex:indexPath.row];
+        [self.dayList deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self updateDayData];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"手误" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
