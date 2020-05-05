@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E81F57D82461314F009A6941 /* UIFont+GWLAdjustFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E81F57D72461314F009A6941 /* UIFont+GWLAdjustFont.m */; };
+		E81F57DB2461326E009A6941 /* UILabel+GWLAdjustFont.m in Sources */ = {isa = PBXBuildFile; fileRef = E81F57DA2461326E009A6941 /* UILabel+GWLAdjustFont.m */; };
 		E8B94B74245F394500EC624D /* GWLAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B94B72245F394500EC624D /* GWLAddViewController.m */; };
 		E8B94B75245F394500EC624D /* GWLAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8B94B73245F394500EC624D /* GWLAddViewController.xib */; };
 		E8B94B78245FF51800EC624D /* NSCalendar+GWLExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B94B77245FF51800EC624D /* NSCalendar+GWLExtend.m */; };
@@ -47,6 +49,10 @@
 		2757A1D373BCA07D3AC49064 /* Pods-commemorationDay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commemorationDay.release.xcconfig"; path = "Target Support Files/Pods-commemorationDay/Pods-commemorationDay.release.xcconfig"; sourceTree = "<group>"; };
 		3A5FDC574908ADA6C95A682D /* Pods-commemorationDay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-commemorationDay.debug.xcconfig"; path = "Target Support Files/Pods-commemorationDay/Pods-commemorationDay.debug.xcconfig"; sourceTree = "<group>"; };
 		B09C077059BA6823805AE945 /* libPods-commemorationDay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-commemorationDay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E81F57D62461314F009A6941 /* UIFont+GWLAdjustFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+GWLAdjustFont.h"; sourceTree = "<group>"; };
+		E81F57D72461314F009A6941 /* UIFont+GWLAdjustFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GWLAdjustFont.m"; sourceTree = "<group>"; };
+		E81F57D92461326E009A6941 /* UILabel+GWLAdjustFont.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+GWLAdjustFont.h"; sourceTree = "<group>"; };
+		E81F57DA2461326E009A6941 /* UILabel+GWLAdjustFont.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+GWLAdjustFont.m"; sourceTree = "<group>"; };
 		E8B94B71245F394500EC624D /* GWLAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GWLAddViewController.h; sourceTree = "<group>"; };
 		E8B94B72245F394500EC624D /* GWLAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GWLAddViewController.m; sourceTree = "<group>"; };
 		E8B94B73245F394500EC624D /* GWLAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GWLAddViewController.xib; sourceTree = "<group>"; };
@@ -230,6 +236,10 @@
 				E8CE00E3245F288A001E68BA /* GWLDayTool.m */,
 				E8B94B76245FF51800EC624D /* NSCalendar+GWLExtend.h */,
 				E8B94B77245FF51800EC624D /* NSCalendar+GWLExtend.m */,
+				E81F57D62461314F009A6941 /* UIFont+GWLAdjustFont.h */,
+				E81F57D72461314F009A6941 /* UIFont+GWLAdjustFont.m */,
+				E81F57D92461326E009A6941 /* UILabel+GWLAdjustFont.h */,
+				E81F57DA2461326E009A6941 /* UILabel+GWLAdjustFont.m */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -397,7 +407,9 @@
 				E8B94B78245FF51800EC624D /* NSCalendar+GWLExtend.m in Sources */,
 				E8CE00EA245F2EC0001E68BA /* GWLDayDataModel.m in Sources */,
 				E8CE00E4245F288A001E68BA /* GWLDayTool.m in Sources */,
+				E81F57DB2461326E009A6941 /* UILabel+GWLAdjustFont.m in Sources */,
 				E8B94B74245F394500EC624D /* GWLAddViewController.m in Sources */,
+				E81F57D82461314F009A6941 /* UIFont+GWLAdjustFont.m in Sources */,
 				E8CE00AF245F2281001E68BA /* AppDelegate.m in Sources */,
 				E8CE00C0245F2283001E68BA /* main.m in Sources */,
 				E8CE00B2245F2281001E68BA /* SceneDelegate.m in Sources */,

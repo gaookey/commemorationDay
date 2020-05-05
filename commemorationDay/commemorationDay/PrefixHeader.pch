@@ -12,5 +12,7 @@
 #import <Masonry.h>
 #import <YYCategories.h>
 #import "NSCalendar+GWLExtend.h"
+#import "UIFont+GWLAdjustFont.h"
+#import "UILabel+GWLAdjustFont.h"
 
 #endif /* PrefixHeader_pch */

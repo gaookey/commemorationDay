@@ -30,9 +30,6 @@
     NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSInteger cumulativeTime = [cal daysWithinEraFromDate:[NSDate dateWithString:model.time format:@"yyyy-MM-dd"] toDate:[NSDate date]];
     
-    NSInteger test = [cal daysWithinEraFromDate:[NSDate dateWithString:@"2020-05-04" format:@"yyyy-MM-dd"] toDate:[NSDate dateWithString:@"2020-05-05" format:@"yyyy-MM-dd"]];
-    NSLog(@"%s 第%d行 \n %ld\n\n",__func__,__LINE__, (long)test);
-    
     if (cumulativeTime < 0) {
         self.cumulative.text = [NSString stringWithFormat:@"剩 %ld 天", ABS(cumulativeTime)];
     } else {

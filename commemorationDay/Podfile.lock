@@ -1,26 +1,22 @@
 PODS:
   - Masonry (1.1.0)
-  - MBProgressHUD (1.2.0)
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
 
 DEPENDENCIES:
   - Masonry
-  - MBProgressHUD
   - YYCategories
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Masonry
-    - MBProgressHUD
     - YYCategories
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 5a09bb305f132ebda93e0569d3db9ebcc38b36a9
+PODFILE CHECKSUM: 5dc827e949b580daf5e2412472d0c3c465141d77
 
 COCOAPODS: 1.8.4
