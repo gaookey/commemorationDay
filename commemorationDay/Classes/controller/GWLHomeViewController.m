@@ -24,6 +24,7 @@
 
 @end
 
+static NSString *const CURRENT_DAY_KEY = @"CURRENT_DAY_KEY";
 static NSString *const DAY_LIST_KEY = @"DAY_LIST_KEY";
 static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
 
@@ -32,13 +33,27 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self  loadCurrentDayData];
+    [self addNotification];
+    
+    [self loadCurrentDayData];
     
     [self setupDayList];
     
     [self loadLocalDayData];
     
     [self addLeftBarButtonItem];
+}
+- (void)addNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateData) name:@"enterForeground" object:nil];
+}
+- (void)updateData {
+    NSString *currentDay = [[NSUserDefaults standardUserDefaults] objectForKey:CURRENT_DAY_KEY];
+    if ([currentDay isEqualToString:[[NSDate date] stringWithFormat:@"yyyy-MM-dd"]]) {
+        return;
+    }
+    
+    [self loadCurrentDayData];
+    [self loadLocalDayData];
 }
 - (void)addLeftBarButtonItem {
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"多选" style:UIBarButtonItemStyleDone target:self action:@selector(moreSelect)];
@@ -92,6 +107,9 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
 - (void)loadCurrentDayData {
     self.today.text = [[NSDate date] stringWithFormat:@"yyyy-MM-dd"];
     self.lunarCalendar.text = [NSString stringWithFormat:@"%@ %@ %@", [GWLDayTool getChineseYearWithDate:[NSDate date]], [GWLDayTool getChineseCalendarWithDate:[NSDate date]], [GWLDayTool getWeekDayWithDate:[NSDate date]]];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:self.today.text forKey:CURRENT_DAY_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 - (IBAction)addDay:(id)sender {
     if (self.isDayListEditing) {
@@ -161,7 +179,10 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
     [tableView moveRowAtIndexPath:sourceIndexPath toIndexPath:destinationIndexPath];
     [self updateDayData];
 }
-#pragma mark - dayList
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+#pragma mark - lazy
 - (UITableView *)dayList {
     if (_dayList == nil) {
         _dayList = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];

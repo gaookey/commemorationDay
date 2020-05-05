@@ -43,6 +43,7 @@
 
 
 - (void)sceneWillEnterForeground:(UIScene *)scene {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"enterForeground" object:nil userInfo:nil];
     // Called as the scene transitions from the background to the foreground.
     // Use this method to undo the changes made on entering the background.
 }
