@@ -28,8 +28,8 @@
     self.date.text = model.time;
         
     NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSInteger cumulativeTime = [cal daysWithinEraFromDate:[NSDate dateWithString:model.time format:@"yyyy-MM-dd"] toDate:[NSDate date]];
-    
+    NSInteger cumulativeTime = [cal daysWithinEraFromDate:[NSDate dateWithString:model.time format:@"yyyy-MM-dd"] toDate:[NSDate dateWithString:[[NSDate date] stringWithFormat:@"yyyy-MM-dd"] format:@"yyyy-MM-dd"]];
+        
     if (cumulativeTime < 0) {
         self.cumulative.text = [NSString stringWithFormat:@"剩 %ld 天", ABS(cumulativeTime)];
     } else {

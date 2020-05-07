@@ -87,6 +87,7 @@ static NSString *const DAY_LIST_CELL_ID = @"DAY_LIST_CELL_ID";
 }
 #pragma mark - 获取本地数据
 - (void)loadLocalDayData {
+    [self.dayData removeAllObjects];
     NSMutableArray *dataArr = [[NSUserDefaults standardUserDefaults] objectForKey:DAY_LIST_KEY];
     for (NSInteger i = 0; i < dataArr.count; i ++) {
         NSData *data = dataArr[i];
